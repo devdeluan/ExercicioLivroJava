@@ -12,10 +12,11 @@ public class Main {
         System.out.println("Bem vindo ao Sistema de listagem de livros!!");
 
         Scanner leitor = new Scanner(System.in);
+
         int opcaoLivro;
 
         do {
-            System.out.print("Escolha uma opçao: 1 - Cadastrar Livro / 0 - Sair ");
+            System.out.print("Escolha uma opçao: 1 - Entrar no sistema / 0 - Sair ");
             opcaoLivro = leitor.nextInt();
 
             switch (opcaoLivro) {
@@ -75,12 +76,12 @@ public class Main {
                                         System.out.println("Nome do autor: " + cadaLivro.autor.nome);
                                         System.out.println("Local Nascimento: " + cadaLivro.autor.localNasc);
                                         System.out.println("Título do livro: " + cadaLivro.titulo);
-                                        System.out.println("Valor do livro: " + cadaLivro.preco);
+                                        System.out.println("Vyalor do livro: " + cadaLivro.preco);
                                         System.out.println("Data de Lançamento: " + cadaLivro.dataLancamento.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
-                                        System.out.println();
-                                        System.out.println("Digite o Enter para continuar");
-                                        leitor.nextLine();
+                                        System.out.println("...");
                                     }
+
+                                    System.out.println("Escolha uma opçao: 1 - Cadastrar livro / 2 - Listar livro / 0 - Voltar ao menu anterior");
 
                                     cadLivro = leitor.nextInt();
 
